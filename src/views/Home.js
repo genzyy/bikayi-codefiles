@@ -17,7 +17,7 @@ const Home = () => {
   const [filterCat, setFilterCat] = useState('all');
 
   const getData = () => {
-    fetch('http://api.nobelprize.org/v1/prize.json', {
+    fetch('https://api.nobelprize.org/v1/prize.json', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
