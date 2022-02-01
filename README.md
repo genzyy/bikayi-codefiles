@@ -8,8 +8,8 @@
 - tailwindcss
 - postcss
 - prettier
+- popperjs
 
 ## Routes
 
-- `/` The Home route shows all the prizes and the awardees.
--
+- `/` The Home route shows all the prizes and the awardees with special awardees at top.
