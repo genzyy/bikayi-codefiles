@@ -38,7 +38,7 @@ const Filter = ({
   }, [dropdownPopoverShow]);
 
   return (
-    <div className=" grid grid-cols-3 gap-3">
+    <div className=" grid sm:grid-cols-1 md:grid-cols-2 gap-3">
       <div>
         <span className="flex">
           <h1 className="capitalize mx-1 text-md">Filter with year</h1>
@@ -85,7 +85,7 @@ const Filter = ({
           }}
         >
           <a
-            className="text-gray-600 text-sm py-2 px-4"
+            className="text-gray-600 text-sm py-2 px-4 capitalize"
             href="#pablo"
             ref={btnDropdownRef}
           >
@@ -95,7 +95,7 @@ const Filter = ({
             ref={popoverDropdownRef}
             className={
               (dropdownPopoverShow ? 'block ' : 'hidden ') +
-              'bg-white text-base z-50 float-left py-2 list-none text-left rounded dropdown-shadow min-w-48'
+              'bg-white text-base z-50 float-left py-2 list-none text-left rounded min-w-48 shadow-lg'
             }
           >
             <a
@@ -113,7 +113,7 @@ const Filter = ({
               <a
                 key={index}
                 href="#pablo"
-                className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+                className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 capitalize"
                 onClick={(e) => {
                   e.preventDefault();
                   setFilterCat(cat);

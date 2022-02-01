@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Filter from '../components/Filter';
+import Specials from '../components/Specials';
 
 const Home = () => {
   const [data, setData] = useState({
@@ -35,7 +36,6 @@ const Home = () => {
     data.prizes.forEach((element) => {
       if (!tempCat.includes(element.category)) tempCat.push(element.category);
     });
-    console.log(tempCat);
     setCategories(tempCat);
   };
 
@@ -52,7 +52,9 @@ const Home = () => {
         setFilterCat={setFilterCat}
         setFilterYear={setFilterYear}
       />
-      <div className="grid grid-cols-3 gap-3 bg-gray">
+      <Specials d={data} />
+      <h1 className="mt-10 text-xl font-bold underline">All Awardees</h1>
+      <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-3 bg-gray">
         {data.prizes.map((p, index) => {
           if (
             filterCat === 'all' &&
