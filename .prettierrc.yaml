@@ -1,4 +1,4 @@
 semi: true
 singleQuote: true
 trailingComma: none
-arrowParens: true
+arrowParens: 'always'
